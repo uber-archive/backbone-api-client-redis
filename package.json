@@ -28,13 +28,26 @@
   "scripts": {
     "test": "grunt jshint && mocha"
   },
-  "dependencies": {},
+  "dependencies": {
+    "redis-delete-pattern": "~0.1.0",
+    "async": "~0.8.0",
+    "object-hash": "~0.3.0",
+    "underscore": "~1.6.0",
+    "request-redis-cache": "~0.1.0"
+  },
   "devDependencies": {
     "mocha": "~1.11.0",
     "grunt": "~0.4.1",
     "grunt-cli": "~0.1.13",
     "grunt-contrib-jshint": "~0.6.0",
-    "grunt-contrib-watch": "~0.4.0"
+    "grunt-contrib-watch": "~0.4.0",
+    "underscore": "~1.6.0",
+    "chai": "~1.9.1",
+    "backbone": "~1.1.2",
+    "backbone-api-client": "~0.1.0",
+    "redis": "~0.10.1",
+    "github": "~0.1.16",
+    "eight-track": "~2.0.0"
   },
   "keywords": [
     "backbone",
