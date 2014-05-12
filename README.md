@@ -167,6 +167,17 @@ Otherwise, we will delete the relevant cache items (any associated collections o
 
 [#1]: https://github.com/uber/backbone-api-client-redis/issues/1
 
+#### `ChildModel#clearCache(method, options, callback)`
+In order to delete cache without taking a `callApiClient` action, we provide the `clearCache` method. Under the hood, `callApiClient` leverages this for non-`read` actions.
+
+This will clear associated collections and relevant models from Redis.
+
+- method `String`, method to clear cache on behalf of (as if it were coming from `callApiClient`)
+    - Possible values are: `create`, `update`, `delete`
+    - We optimize on behalf of this parameter (e.g. `create` will not search/delete model items since they don't exist)
+- options `Object`, options that would be received by `callApiClient`
+- callback `Function`, error-first, `(err)`, callback to handle any errors that arose during cache removal
+
 ### `mixinCollection(CollectionKlass)`
 Similar setup as [`mixinModel`][]; extends `CollectionKlass` and adds caching logic.
 
@@ -180,7 +191,7 @@ Returns:
 
 - ChildCollection `BackboneCollection`, `Collection` class extended from `ModelKlass`
 
-#### `cachePrefix`, `cacheTtl`, `initialize`, `callApiClient`
+#### `cachePrefix`, `cacheTtl`, `initialize`, `callApiClient`, `clearCache`
 These methods are all the same as [`mixinModel`][] except for two things. Instead of requiring `cachePrefix`/`cacheTtl`, these are resolved by default via `ChildCollection.Model`.
 
 For example:
