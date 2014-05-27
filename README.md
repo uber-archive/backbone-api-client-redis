@@ -4,9 +4,12 @@ Mixins that add [Redis][] caching on top of [backbone-api-client][]
 
 This was built to provide an easy way to add caching to [Backbone][] resources. Cache mechanism details can be found in the [Caching documentation](#caching).
 
+[`twemproxy`][] is supported. Redis commands used: `sadd`, `smembers`, `del`.
+
 [Redis]: http://redis.io/
 [backbone-api-client]: https://github.com/uber/backbone-api-client
 [Backbone]: http://backbonejs.org/
+[`twemproxy`]: https://github.com/twitter/twemproxy/blob/v0.3.0/notes/redis.md
 
 ## Getting Started
 Install the module with: `npm install backbone-api-client-redis`
