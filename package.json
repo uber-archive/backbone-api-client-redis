@@ -1,7 +1,7 @@
 {
   "name": "backbone-api-client-redis",
   "description": "Mixins that add Redis caching on top of backbone-api-client",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "homepage": "https://github.com/uber/backbone-api-client-redis",
   "author": {
     "name": "Todd Wolfson",
