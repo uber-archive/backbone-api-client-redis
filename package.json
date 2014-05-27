@@ -29,7 +29,6 @@
     "test": "grunt jshint && mocha"
   },
   "dependencies": {
-    "redis-delete-pattern": "~0.1.0",
     "async": "~0.8.0",
     "object-hash": "~0.3.0",
     "underscore": "~1.6.0",
